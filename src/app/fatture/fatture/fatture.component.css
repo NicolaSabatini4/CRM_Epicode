@@ -1,0 +1,16 @@
+.orange{
+    color: #000000;
+    background-color: #f09927;
+}
+
+.btnH:hover{
+    color: rgb(255, 255, 255);
+    
+    box-shadow: 5px 10px 38px #a7a5a5;
+
+    
+}
+
+.bTable{
+    margin: 3%;
+}

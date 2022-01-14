@@ -1,0 +1,197 @@
+<form class="pt-5">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Partita Iva</label>
+        <input type="text" class="form-control"  [(ngModel)]="clienteEdit.partitaIva" name="partitaIva" id="pIvaInput">
+      </div>
+  
+      <div class="form-group col-md-6">
+        <label>Ragione Sociale</label>
+        <input type="text" class="form-control" [(ngModel)]="clienteEdit.ragioneSociale" name="ragioneSociale" id="ragSocInput">
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" [(ngModel)]="clienteEdit.email" name="email" id="emailInput">
+    </div>
+  
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Pec</label>
+        <input type="email" class="form-control" [(ngModel)]="clienteEdit.pec" name="pec" id="pecInput">
+      </div>
+  
+      <div class="form-group col-md-4">
+        <label>Tipo Cliente</label>
+        <select id="tipoClienteInput" class="form-control" [(ngModel)]="clienteEdit.tipoCliente" name="tipoCliente">
+          <option selected>Seleziona un opzione</option>
+          <option>SRL</option>
+          <option>SAS</option>
+          <option>SPA</option>
+          <option>PA</option>
+        </select>
+      </div>
+  
+      <div class="form-group col-md-2">
+        <label>Telefono</label>
+        <input type="text" class="form-control" [(ngModel)]="clienteEdit.telefono" name="telefono" id="telInput">
+      </div>
+    </div>
+  
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label >Nome Contatto</label>
+        <input type="text" class="form-control" [(ngModel)]="clienteEdit.nomeContatto" name="nomeContatto" id="nomeContattoInput">
+      </div>
+  
+      <div class="form-group col-md-6">
+        <label>Cognome Contatto</label>
+        <input type="text" class="form-control" [(ngModel)]="clienteEdit.cognomeContatto" name="cognomeContatto" id="cognomeContattoInput">
+      </div>
+    </div>
+  
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label >Telefono Contatto</label>
+        <input type="text" class="form-control" [(ngModel)]="clienteEdit.telefonoContatto" name="telefonoContatto" id="telefonoContattoInput">
+      </div>
+  
+      <div class="form-group col-md-6">
+        <label>Email Contatto</label>
+        <input type="email" class="form-control" [(ngModel)]="clienteEdit.emailContatto" name="emailContatto" id="emailContattoInput">
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label>Fatturato Annuale</label>
+      <input type="number" class="form-control" [(ngModel)]="clienteEdit.fatturatoAnnuale" name="fatturatoAnnuale" id="fatturatoInput">
+    </div>
+</form>
+  
+  
+  
+  
+  
+     <div class="form-row justify-content-around">
+  
+      <div class="form-group col-md-5">
+       <button type="button" class="btn btn-lg btn-block mt-1 mb-5 orange btnH" (click)="displayO()">Indirizzo Sede Operativa <i class="bi bi-chevron-bar-expand"></i></button>
+  
+       <div *ngIf="displayOp">  <!--  NGIF      -->
+        <form class="mt-3">
+          <div class="form-group">
+          <label>Indirizzo</label>
+          <input type="text" class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeOperativa.via" name="via" id="indirizzoOperativaInput">
+        </div>
+    
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Civico</label>
+            <input type="text" class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeOperativa.civico" name="civico" id="civicoOperativaInput">
+          </div>
+      
+          <div class="form-group col-md-6">
+            <label>Cap</label>
+            <input type="text" class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeOperativa.cap" name="cap" id="capOperativaInput">
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <label>Località</label>
+          <input type="text" class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeOperativa.localita" name="localita" id="localitaOperativaInput">
+        </div>
+    
+        <div class="row">
+
+          <div class="form-group col-md-6">
+            <label>Comune</label>
+            <select type="text" class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeOperativa.comune" name="comune" id="comuneLegaleInput">
+              <option selected></option>
+              <option *ngFor="let item of comuni" [ngValue]="item">{{item.nome | json}}</option>
+            </select>
+          </div>
+          
+  
+  
+  
+          <div class="col-md-6">
+            <label>Provincia</label>
+            <select class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeOperativa.comune.provincia" name="provincia" aria-label="Default select example" >
+              <option selected  ></option>
+              <option  *ngFor="let item of province" [ngValue]="item" >{{item.nome | json}}</option>
+            </select>
+          </div>
+          
+          
+        </div>
+
+      </form>
+      </div>
+
+     </div>
+    
+      
+  
+  
+  
+      <div class="form-group col-md-5 ">
+       <button type="button" class="btn btn-lg btn-block mt-1 mb-5 orange btnH" (click)="displayL()">Indirizzo Sede Legale <i class="bi bi-chevron-bar-expand"></i></button>
+  
+       <div *ngIf="displayLeg">  <!-- NGIF  -->
+            <form class="mb-3">
+            <div class="form-group">
+              <label>Indirizzo</label>
+              <input type="text" class="form-control" class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeLegale.via" name="via" id="indirizzoLegaleInput">
+            </div>
+    
+        <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Civico</label>
+                <input type="text" class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeLegale.civico" name="civico" id="civicoLegaleInput">
+              </div>
+      
+                <div class="form-group col-md-6">
+                  <label>Cap</label>
+                  <input type="text" class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeLegale.cap" name="cap" id="capLegaleInput">
+                </div>
+        </div>
+    
+        <div class="form-group">
+          <label>Località</label>
+          <input type="text" class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeLegale.localita" name="localita" id="localitaLegaleInput">
+        </div>
+    
+        <div class="row">
+
+          <div class="form-group col-md-6">
+            <label>Comune</label>
+            <select type="text" class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeLegale.comune" name="comune" id="comuneLegaleInput">
+              <option selected></option>
+              <option *ngFor="let item of comuni" [ngValue]="item">{{item.nome | json}}</option>
+            </select>
+          </div>
+          
+  
+  
+  
+          <div class="col-md-6">
+            <label>Provincia</label>
+            <select class="form-control" [(ngModel)]="clienteEdit.indirizzoSedeLegale.comune.provincia" name="provincia" aria-label="Default select example" >
+              <option selected  ></option>
+              <option  *ngFor="let item of province" [ngValue]="item" >{{item.nome | json}}</option>
+            </select>
+          </div>
+          
+          
+        </div>
+      </form>
+      </div>
+     </div>
+    
+    </div>
+
+   
+  
+    <button type="submit" class="btn btn-lg btn-block mt-5 mb-5 orange btnH" (click)="salvaCliente(clienteEdit)">Salva cliente</button>
+  

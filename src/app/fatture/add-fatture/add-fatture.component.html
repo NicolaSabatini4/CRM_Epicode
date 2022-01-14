@@ -1,0 +1,42 @@
+<h2 class="text-center mt-4">Inserisci i dati della nuova fattura</h2>
+<div class="newcl">
+<form class="m-4" action="">
+    <div class="form-group row">
+        
+        <div class="col-5">
+            <label>Data Fatturazione:</label>
+            <input [(ngModel)]="newFattura.data" type="number"  class="form-control" name="data" >
+        </div>
+        <div class="col-5">
+          <label>Numero Fattura</label>
+            <input [(ngModel)]="newFattura.numero" type="number" class="form-control" name="numero">
+        </div>
+        <div class="col-5">
+          <label>Anno Fattura:</label>
+            <input [(ngModel)]="newFattura.anno" type="number" class="form-control" name="anno"  >
+        </div>
+        <div class="col-5">
+          <label>Importo fattura:</label>
+            <input [(ngModel)]="newFattura.importo" type="number" class="form-control" name="importo">
+        </div>
+        <div class="col-6">
+          <label>Stasto fattura:</label>
+          <select class="form-select form-control form-select-lg" [(ngModel)]="newFattura.stato" name="stato" aria-label="Default select example" >
+              <option selected>Stato fattura...</option>
+              <option  *ngFor="let item of sfattura" [ngValue]="item" >{{item.nome | json}}</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <label>Cliente:</label>
+          <select class="form-select form-control form-select-lg" [(ngModel)]="newFattura.cliente" name="cliente" aria-label="Default select example" >
+            <label>Cliente:</label>
+              <option selected>Cliente</option>
+              <option  *ngFor="let item of clienti" [ngValue]="item" >{{item.nomeContatto | json}}</option>
+          </select>
+        </div>
+    </div>
+</form>
+<button type="submit" class="btn btn-lg btn-block mt-5 mb-5 orange btnH" (click)="aggiungiFattura(newFattura)">Salva fattura</button>
+
+</div>
+ 

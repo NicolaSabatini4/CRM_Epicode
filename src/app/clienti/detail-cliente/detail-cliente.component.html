@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="card text-center mt-5">
+        <div class="card-header">
+            <h1>Dettagli cliente {{clienteDetail.id}}</h1>
+        </div>
+        <div class="card-body row">
+          <div class="col-md-6">
+            <div>
+              <h5 class="card-title">Partita iva:</h5>
+              <h4>{{clienteDetail.partitaIva}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Ragione Sociale:</h5>
+              <h4>{{clienteDetail.ragioneSociale}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Tipo Cliente:</h5>
+              <h4> {{clienteDetail.tipoCliente}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Email:</h5>
+              <h4> {{clienteDetail.email}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Pec: </h5>
+              <h4>{{clienteDetail.pec}}</h4>
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div>
+              <h5 class="card-title">Telefono:</h5>
+              <h4> {{clienteDetail.telefono}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Nome Contatto: </h5>
+              <h4>{{clienteDetail.nomeContatto}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Cognome Contatto:</h5>
+              <h4> {{clienteDetail.cognomeContatto}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Telefono Contatto: </h5>
+              <h4>{{clienteDetail.telefonoContatto}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Email Contatto: </h5>
+              <h4>{{clienteDetail.emailContatto}}</h4>
+            </div>
+          </div>
+
+          
+              <div class="col-md-6 mt-5">
+                  <h5 class="card-title">Indirizzo Sede Operativa:</h5>
+                  <ul class="list-unstyled">
+                    <li>Via:{{clienteDetail.indirizzoSedeOperativa.via}} </li>
+                    <li>Civico:{{clienteDetail.indirizzoSedeOperativa.civico}} </li>
+                    <li>Cap: {{clienteDetail.indirizzoSedeOperativa.cap}}</li>
+                    <li>Località:{{clienteDetail.indirizzoSedeOperativa.localita}} </li>
+                    <li>Comune:{{clienteDetail.indirizzoSedeOperativa.comune.nome}} </li>
+                    <li>Provincia:{{clienteDetail.indirizzoSedeOperativa.comune.provincia.nome}} </li>
+                    <li>Sigla:{{clienteDetail.indirizzoSedeOperativa.comune.provincia.sigla}} </li>
+                  </ul>
+              </div>
+
+              <div class="col-md-6 mt-5">
+                  <h5 class="card-title">Indirizzo Sede Legale:</h5>
+                  <ul class="list-unstyled">
+                    <li>Via: {{clienteDetail.indirizzoSedeLegale.via}}</li>
+                    <li>Civico: {{clienteDetail.indirizzoSedeLegale.civico}}</li>
+                    <li>Cap: {{clienteDetail.indirizzoSedeLegale.cap}}</li>
+                    <li>Località: {{clienteDetail.indirizzoSedeLegale.localita}}</li>
+                    <li>Comune: {{clienteDetail.indirizzoSedeLegale.comune.nome}}</li>
+                    <li>Provincia: {{clienteDetail.indirizzoSedeLegale.comune.provincia.nome}}</li>
+                    <li>Sigla: {{clienteDetail.indirizzoSedeLegale.comune.provincia.sigla}}</li>
+                  </ul>
+              </div>
+          </div>
+        
+          
+        
+        <div class="card-footer text-muted">
+          <button type="button" class="btn btn-lg btn-block mt-5 mb-5 btnH orange" (click)="goModifica()">Modifica</button>
+        </div>
+
+              
+              
+
+      </div>
+</div>

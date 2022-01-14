@@ -1,0 +1,25 @@
+<h1 class="pt-5 text-center ">Inserisci i dati del nuovo comune</h1>
+
+<form class="pt-5">
+    <div class="form-group col-md-6">
+        <label>Nome</label>
+        <input type="text" class="form-control"  [(ngModel)]="newComune.nome" name="nome" id="nomeInput">
+      </div>
+  
+      <div class="row">
+        <div class="col-md-8">
+          <label>Provincia</label>
+            <select class="form-control " [(ngModel)]="newComune.provincia" name="provincia" aria-label="Default select example" >
+              
+              <option selected  >Provincia</option>
+              <option  *ngFor="let item of province" [ngValue]="item" >{{item.nome | json}}</option>
+            </select>
+        </div>
+  
+        
+      </div>
+
+
+</form>
+
+<button type="submit" class="btn btn-lg btn-block mt-5 mb-5 btnH orange" (click)="aggiungiComune(newComune)">Aggiungi Comune</button>

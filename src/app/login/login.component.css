@@ -1,0 +1,64 @@
+
+
+html,body{
+  background-image: linear-gradient(to right, #eb8e37 , #ebebeb);
+  height: 80vh;
+  margin-top: 0;
+
+  }
+  
+  .container{
+  height: 100%;
+  align-content: center;
+  }
+  
+  .card{
+  height: 370px;
+  margin-top: 20vh;
+  margin-bottom: 10%;
+  width: 400px;
+  background-color: rgba(0,0,0,0.5) !important;
+  box-shadow: 5px 10px 38px #888888;
+  }
+
+  
+  
+
+  
+  .card-header h3{
+  color: white;
+  }
+  
+ 
+  
+  .input-group-prepend span{
+  width: 50px;
+  background-color: #eb8e37;
+  color: black;
+  border:0 !important;
+  }
+  
+  input:focus{
+  outline: 0 0 0 0  !important;
+  box-shadow: 0 0 0 0 !important;
+  
+  }
+  
+ 
+  
+  .login_btn{
+  color: #000000;
+  background-color: #eb8e37;
+  width: 100px;
+  }
+  
+  .login_btn:hover{
+  color: rgb(255, 255, 255);
+  
+  
+  }
+  
+  
+  
+
+

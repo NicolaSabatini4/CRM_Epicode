@@ -1,0 +1,114 @@
+<div class="container">
+    <div class="card text-center mt-5">
+        <div class="card-header">
+            <h1>Numero fattura:  {{fatturaDetail.numero}}</h1>
+        </div>
+
+
+          <div>
+            <h5 class="card-title">Data:</h5>
+            <h4>{{fatturaDetail.data}}</h4>
+          </div>
+
+          <div>
+            <h5 class="card-title">Anno:</h5>
+            <h4>{{fatturaDetail.anno}}</h4>
+          </div>
+
+          <div>
+            <h5 class="card-title">Importo:</h5>
+            <h4>{{fatturaDetail.importo}}</h4>
+          </div>
+
+          <div>
+            <h5 class="card-title">Stato:</h5>
+            <h4>{{fatturaDetail.stato.nome}}</h4>
+          </div>
+
+        <div class="card-body row">
+          <div class="col-md-6">
+            <div>
+              <h5 class="card-title">Partita iva:</h5>
+              <h4>{{fatturaDetail.cliente.partitaIva}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Ragione Sociale:</h5>
+              <h4>{{fatturaDetail.cliente.ragioneSociale}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Tipo Cliente:</h5>
+              <h4> {{fatturaDetail.cliente.tipoCliente}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Email:</h5>
+              <h4> {{fatturaDetail.cliente.email}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Pec: </h5>
+              <h4>{{fatturaDetail.cliente.pec}}</h4>
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div>
+              <h5 class="card-title">Telefono:</h5>
+              <h4> {{fatturaDetail.cliente.telefono}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Nome Contatto: </h5>
+              <h4>{{fatturaDetail.cliente.nomeContatto}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Cognome Contatto:</h5>
+              <h4> {{fatturaDetail.cliente.cognomeContatto}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Telefono Contatto: </h5>
+              <h4>{{fatturaDetail.cliente.telefonoContatto}}</h4>
+            </div>
+            <div class="mt-5">
+              <h5 class="card-title">Email Contatto: </h5>
+              <h4>{{fatturaDetail.cliente.emailContatto}}</h4>
+            </div>
+          </div>
+
+          
+              <div class="col-md-6 mt-5">
+                  <h5 class="card-title">Indirizzo Sede Operativa:</h5>
+                  <ul class="list-unstyled">
+                    <li>Via:{{fatturaDetail.cliente.indirizzoSedeOperativa.via}} </li>
+                    <li>Civico:{{fatturaDetail.cliente.indirizzoSedeOperativa.civico}} </li>
+                    <li>Cap: {{fatturaDetail.cliente.indirizzoSedeOperativa.cap}}</li>
+                    <li>Località:{{fatturaDetail.cliente.indirizzoSedeOperativa.localita}} </li>
+                    <li>Comune:{{fatturaDetail.cliente.indirizzoSedeOperativa.comune.nome}} </li>
+                    <li>Provincia:{{fatturaDetail.cliente.indirizzoSedeOperativa.comune.provincia.nome}} </li>
+                    <li>Sigla:{{fatturaDetail.cliente.indirizzoSedeOperativa.comune.provincia.sigla}} </li>
+                  </ul>
+              </div>
+
+              <div class="col-md-6 mt-5">
+                  <h5 class="card-title">Indirizzo Sede Legale:</h5>
+                  <ul class="list-unstyled">
+                    <li>Via: {{fatturaDetail.cliente.indirizzoSedeLegale.via}}</li>
+                    <li>Civico: {{fatturaDetail.cliente.indirizzoSedeLegale.civico}}</li>
+                    <li>Cap: {{fatturaDetail.cliente.indirizzoSedeLegale.cap}}</li>
+                    <li>Località: {{fatturaDetail.cliente.indirizzoSedeLegale.localita}}</li>
+                    <li>Comune: {{fatturaDetail.cliente.indirizzoSedeLegale.comune.nome}}</li>
+                    <li>Provincia: {{fatturaDetail.cliente.indirizzoSedeLegale.comune.provincia.nome}}</li>
+                    <li>Sigla: {{fatturaDetail.cliente.indirizzoSedeLegale.comune.provincia.sigla}}</li>
+                  </ul>
+              </div>
+          </div>
+        
+          
+        
+        <div class="card-footer text-muted">
+          <button type="button" (click)="goEditFattura()" class="btn btn-lg btn-block mt-5 mb-5 btnH orange">Modifica Fattura</button>
+        </div>
+
+              
+              
+
+      </div>
+</div>

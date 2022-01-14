@@ -1,0 +1,27 @@
+a{
+    font-size: 5em;
+    padding-left: 2vw;
+    padding-right: 4vw;
+    color: rgb(83, 83, 83);
+    
+}
+
+
+.gray{
+    background-color: #f09927;
+    
+}
+
+.btnH:hover{
+    
+    
+    color: black;
+
+    
+}
+
+.home{
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+

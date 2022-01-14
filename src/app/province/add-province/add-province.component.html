@@ -1,0 +1,19 @@
+<h1 class="pt-5 text-center ">Inserisci i dati della nuova provincia</h1>
+
+<form class="pt-5">
+  
+    <div class="form-group col-md-6">
+      <label>Provincia</label>
+      <input type="text" class="form-control"  [(ngModel)]="newProvincia.nome" name="nome" id="nomeInput">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Sigla</label>
+      <input type="text" class="form-control" [(ngModel)]="newProvincia.sigla" name="sigla" id="siglaInput">
+    </div>
+  
+
+
+  <button type="submit" class="btn btn-lg btn-block mt-5 mb-5 btnH orange" (click)="aggiungiProvincia(newProvincia)">Aggiungi Provincia</button>
+</form>
+

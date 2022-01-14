@@ -1,0 +1,28 @@
+h5,h1{
+    color: #f09927
+}
+
+h4{
+    color: #000000;
+}
+
+.orange{
+    color: #000000;
+    background-color: #f09927;
+}
+
+.btnH:hover{
+    color: rgb(255, 255, 255);
+    width: 101%;
+    box-shadow: 5px 10px 38px #a7a5a5;
+
+    
+}
+
+
+
+
+.card{
+    box-shadow: 5px 10px 38px #3f3e3e;
+}
+

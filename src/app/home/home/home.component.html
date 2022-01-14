@@ -1,0 +1,73 @@
+
+
+<div class="home">
+  <div class="row justify-content-between">
+      <div class="card mb-5 col-md-5 gray " style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <a class=" orange btnH" [routerLink]="['clienti/page/0']"><i class="bi bi-people-fill"></i></a>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h2>CLIENTI:</h2>
+                  <h2 id="clienti">{{clientiTotalElements}}</h2>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="card mb-5 col-md-5 gray" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <a class=" navbar-brand btnH" [routerLink]="['fatture/page/0']"><i class="bi bi-receipt"></i></a>
+             
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h2>FATTURE:</h2>
+                  <h2 id="fatture">{{fattureTotalElements}}</h2>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  
+      <div class="row justify-content-between">
+          <div class="card mb-5 gray col-md-5" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <a class=" navbar-brand btnH" [routerLink]="['comuni/page/0']"><i class="bi bi-bank2"></i></a>
+               
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h2>COMUNI:</h2>
+                    <h2 id="comuni">{{comuniTotalElements}}</h2>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+    
+    
+          <div class="card mb-5 gray col-md-5" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <a class=" navbar-brand btnH" [routerLink]="['province/page/0']"><i class="bi bi-geo-fill"></i></a>
+               
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h2>PROVINCE:</h2>
+                    <h2 id="province">{{provinceTotalElements}}</h2>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+</div>
+

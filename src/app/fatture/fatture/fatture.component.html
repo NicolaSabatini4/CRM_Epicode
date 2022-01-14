@@ -1,0 +1,48 @@
+<button type="button" class="btn btn-lg btn-block mt-5 mb-5 orange btnH" [routerLink]="['/fatture/add']">Aggiungi nuova fattura</button>
+<div class="table-responsive">
+  <table class="table table-striped">
+      <thead class="table-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Ragione Sociale</th>
+        <th scope="col">Data</th>
+        <th scope="col">Anno</th>
+        <th scope="col">Importo</th>
+        <th scope="col">Stato</th>
+        
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of fatture; index as i">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.cliente.ragioneSociale}}</td>
+        <td>{{item.data}}</td>
+        <td>{{item.anno}}</td>
+        <td>{{item.importo}}</td>
+        <td>{{item.stato.nome}}</td>
+        
+        <td><button type="button" class="btn btn-dark bTable " (click)="detailFattura(item)"><i class="bi bi-info-circle-fill"></i></button>
+        <button type="button" class="btn btn-danger bTable" (click)="removeFattura(item)"><i class="bi bi-x-circle-fill"></i></button></td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+  
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link orange btnH" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item btnH" *ngFor="let num of pageNumbers">
+        <a class="page-link orange" href="fatture/page/{{num}}">{{num +1}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link orange btnH" (click)="next" aria-label="Next">    <!--  funzione next da implementare  -->
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>

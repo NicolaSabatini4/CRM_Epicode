@@ -1,0 +1,54 @@
+<h2 class="text-center">Modifica i dati della fattura</h2>
+<div class="EDcl">
+<form class="m-4" action="">
+    <div class="form-group row">
+
+          <div class="col-6">
+            <label>Ragione sociale</label>
+            <input [(ngModel)]="fatturaEdit.cliente.ragioneSociale" type="text"  class="form-control" name="ragioneSociale" disabled>
+        </div>
+
+        <div class="col-6">
+          <label>Nome contatto</label>
+            <input [(ngModel)]="fatturaEdit.cliente.nomeContatto" type="text"  class="form-control" name="nomeContatto" disabled>
+        </div>
+
+        <div class="col-6">
+          <label>Cognome contatto</label>
+            <input [(ngModel)]="fatturaEdit.cliente.cognomeContatto" type="text"  class="form-control" name="cognomeContatto" disabled>
+        </div>
+        
+        <div class="col-6">
+          <label>Data fattura</label>
+            <input [(ngModel)]="fatturaEdit.data" type="text"  class="form-control" name="data" >
+        </div>
+
+        <div class="col-6">
+          <label>Anno fatturazione</label>
+            <input [(ngModel)]="fatturaEdit.anno"  type="number"  class="form-control" name="anno" >
+        </div>
+
+        <div class="col-6">
+          <label>Numero fattura</label>
+          <input [(ngModel)]="fatturaEdit.numero"  type="number"  class="form-control" name="numero">
+      </div>
+
+
+        <div class="col-6">
+          <label>Importo fattura</label>
+            <input [(ngModel)]="fatturaEdit.importo"  type="text" class="form-control" name="importo" >
+        </div>
+
+        <div class="col-6">
+          <label>Stato fattura</label>
+          <select class="form-select form-control " [(ngModel)]="fatturaEdit.stato" name="stato" aria-label="Default select example" >
+              <option selected>Stato fattura...</option>
+              <option  *ngFor="let item of sfattura" [ngValue]="item" >{{item.nome | json}}</option>
+          </select>
+        </div>
+
+    </div>
+</form>
+    <div>
+        <button type="submit" class="btn btn-lg btn-block mt-5 mb-5 orange btnH" (click)="salvaFattura(fatturaEdit)">Modifica fattura</button>
+    </div>
